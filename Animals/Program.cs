@@ -3,16 +3,18 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Animals;
+
 public class Program
 {
     static void Main(string[] args)
     {
-        Animals.Cow cow = new Animals.Cow("Корова", "Травушка", "Россиюшка");
-        Animals.Pig pig = new Animals.Pig("Свинья", "БУКВАЛЬНО ВСЕ", "Украина");
-        Animals.Turtle turtle = new Animals.Turtle("Черепаха", "рыб", "Бразилия");
-        Animals.Croco crocodile = new Animals.Croco("Крокодил", "всех", "Нигерия");
-        Animals.Lion lion = new Animals.Lion("Лев", "че дадут", "Цирк");
-        Animals.Whale whale = new Animals.Whale("Кит", "планктон", "Лужа");
+        IAnimals cow = new Cow();
+        IAnimals pig = new Pig();
+        IAnimals turtle = new Turtle();
+        IAnimals crocodile = new Croco();
+        IAnimals lion = new Lion();
+        IAnimals whale = new Whale();
 
         Console.WriteLine("-------------------");
         Console.WriteLine("Привет друг, это крутейшая программа для того чтобы узнать как звучит то или иное животное, попробуй, введи тип животного: ");
